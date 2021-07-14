@@ -98,7 +98,7 @@ def bot_commands(emailFrom, emailSubject): #comandos para o bot
                 try:
                     msg = """
                     -------------------------------[comandos]----------------------------
-                     Comandos para que pode ser execultado:
+                     Comandos que pode ser execultado:
 
                     --> "luz on" para ligar a Luz;
                     --> "luz off" para desligar a luz;
@@ -120,7 +120,7 @@ def bot_commands(emailFrom, emailSubject): #comandos para o bot
 
 
             elif commands == name_bot:
-                print("sara foi chamada!")
+                print("{} foi chamada!".format(name_bot))
                 try:
                     msg = """Estou aqui! Como posso ajudar? \nvocê pode digitar "help" para listar comandos!"""
                     sends_mail(msg) #enviar mensagem por email de confirmação
