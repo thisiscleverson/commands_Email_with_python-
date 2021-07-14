@@ -152,14 +152,18 @@ def sends_mail(sends): # função para enviar mensagem
 
 def start_bot(sends): # função para iniciar o bot 
 
-    if sends != None:
-        try:
-            sends_mail(sends)
-        except:
-            print("erro!")
-    
     # tratamento de erros
     try: 
-        read_email()
+        read_email()# ler os email
     except:
-        print("Erro na conexão", end="")
+        print("Erro na conexão")
+
+    if sends != None:
+            try:
+                sends_mail(sends) #enviar mensagem via email
+            except:
+                print("erro! ")
+
+while True:
+
+    start_bot("hello world!") # iniciar o bot
